@@ -60,3 +60,18 @@ html, body {
 .nav-list__link {
     color: #fff;
 }
+
+.nav-list__link--active {
+    position: relative;
+}
+
+.nav-list__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #5C62EC;
+}
