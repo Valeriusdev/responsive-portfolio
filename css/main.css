@@ -303,6 +303,10 @@ html, body {
     text-align: center;
 }
 
+.content-list a {
+    color: var(--accent);
+}
+
 .content-list__item {
     font-size: 18px;
     line-height: 1.5;
