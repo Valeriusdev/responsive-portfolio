@@ -25,15 +25,42 @@ font-family: 'Poppins', sans-serif;
     --dark-border: var(--black-border);
     --header-text: var(--white);
     --accent: var(--purple);
+
+    /* Light Mode */
+    --page-bg: var(--white);
+    --text-color: var(--black);
+
+    --title-1: var(--accent);
+
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+    /* Dark Mode */
+    --page-bg: #252526;
+    --text-color: var(--white);
+
+    --title-1: var(--white);
+
+    --project-card-bg: var(--black);
+    --project-card-text: var(--white);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
 }
 
 html, body {
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: -0.5px;
-    color: var(--text-color);
-    height: 100%;
+
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+
+    /* Light Mode */
+    background-color: var(--page-bg);
+    color: var(--text-color)
 }
 
 /* General */
@@ -53,7 +80,7 @@ html, body {
     font-size: 60px;
     font-weight: 700;
     line-height: 1.3;
-    color: var(--accent);
+    color: var(--title-1);
     text-align: center;
 }
 
@@ -262,6 +289,7 @@ html, body {
 
     border-radius: 5px;
     border: 1px solid #000;
+    background-color: var(--white);
     color: #000;
 
     transition: opacity 0.2s ease-in;
@@ -288,10 +316,10 @@ html, body {
 
 .project {
     max-width: 370px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    background-color: var(--project-card-bg);
+    box-shadow: var(--box-shadow);
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;    
 }
 
 .project:hover {
@@ -308,7 +336,7 @@ html, body {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
-    color: var(--text-color);
+    color: var(--project-card-text);
 }
 
 /* Project details */
@@ -479,6 +507,3 @@ html, body {
         width: 28px;
     }
 } 
-
-
-
